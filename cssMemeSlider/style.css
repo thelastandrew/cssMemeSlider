@@ -1,0 +1,80 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.main {
+  width: 800px;
+  padding: 0.5rem 1.5rem;
+  text-align: center;
+  background-color: aquamarine;
+  border-radius: 0.5rem;
+}
+
+.title {
+  margin-bottom: 0.5em;
+}
+
+.slider-frame {
+  width: 60vh;
+  height: 60vh;
+  margin: 0 auto 1rem;
+  border-radius: 1%;
+  overflow-x: hidden;
+  display: flex;
+  flex-direction: row;
+}
+
+.slider-slide {
+  min-width: 100%;
+  height: 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.slide1 {
+  background-image: url('./assets/when-your-dead.jpeg');
+}
+
+.slide2 {
+  background-image: url('./assets/spider-man.jpeg');
+}
+
+.slide3 {
+  background-image: url('./assets/fixing.png');
+}
+
+.slide4 {
+  background-image: url('./assets/heaviest-objects.jpeg');
+}
+
+.slide5 {
+  background-image: url('./assets/compurers.jpeg');
+}
+
+.sub-group {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-between;
+}
+
+.fig-captures {
+  display: flex;
+  overflow-x: hidden;
+  width: 50%;
+}
+
+.capture {
+  text-align: left;
+  min-width: 100%;
+}
