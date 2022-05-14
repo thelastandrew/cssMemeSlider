@@ -11,6 +11,7 @@ body {
   justify-content: center;
   align-items: center;
   font-family: Arial, Helvetica, sans-serif;
+  background-color: blueviolet;
 }
 
 .main {
@@ -20,6 +21,7 @@ body {
   text-align: center;
   background-color: aquamarine;
   border-radius: 0.5rem;
+  box-shadow: 0.5rem 0.5rem 3rem rgb(0, 0, 0);
 }
 
 input {
@@ -99,6 +101,10 @@ label {
 label:hover .slider-control {
   background-color: rgb(183, 43, 226);
   box-shadow: 0rem 0rem 1rem rgb(183, 43, 226);
+}
+
+label:active .slider-control {
+  background-color: transparent;
 }
 
 #slider-button1:checked ~ .sub-group .controls label .control1,
