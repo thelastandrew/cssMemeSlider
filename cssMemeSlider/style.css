@@ -84,7 +84,7 @@ input {
 }
 
 label {
-  padding: 0.3rem;
+  padding: 0.5rem;
   cursor: pointer;
 }
 
@@ -94,6 +94,20 @@ label {
   height: 1.2rem;
   border: 1px solid rgb(37, 33, 33);
   border-radius: 50%;
+  transition: 0.3s ease;
+}
+
+label:hover .slider-control {
+  background-color: rgb(183, 43, 226);
+  box-shadow: 0rem 0rem 1rem rgb(183, 43, 226);
+}
+
+#slider-button1:checked ~ .sub-group .controls label .control1,
+#slider-button2:checked ~ .sub-group .controls label .control2,
+#slider-button3:checked ~ .sub-group .controls label .control3,
+#slider-button4:checked ~ .sub-group .controls label .control4,
+#slider-button5:checked ~ .sub-group .controls label .control5 {
+  background-color: cadetblue;
 }
 
 .fig-captures {
