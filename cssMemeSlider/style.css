@@ -1,0 +1,199 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  transition: all ease-in 0.5s;
+}
+
+body {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: blueviolet;
+}
+
+.main {
+  width: 40vw;
+  padding: 0.5rem 1.5rem;
+  text-align: center;
+  background-color: aquamarine;
+  border-radius: 0.5rem;
+  box-shadow: 0.5rem 0.5rem 3rem rgb(0, 0, 0);
+}
+
+input {
+  display: none;
+}
+
+.title {
+  font-size: 1.5rem;
+  margin-bottom: 0.5em;
+}
+
+.slider-frame {
+  margin: 0 auto 1rem;
+  border-radius: 1%;
+  overflow-x: hidden;
+}
+
+.slider-body {
+  display: flex;
+  flex-direction: row;
+}
+
+.slider-slide {
+  min-width: 100%;
+  height: 0;
+  padding-bottom: 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.slide1 {
+  background-image: url('./assets/when-your-dead.jpeg');
+}
+
+.slide2 {
+  background-image: url('./assets/spider-man.jpeg');
+}
+
+.slide3 {
+  background-image: url('./assets/fixing.png');
+}
+
+.slide4 {
+  background-image: url('./assets/heaviest-objects.jpeg');
+}
+
+.slide5 {
+  background-image: url('./assets/compurers.jpeg');
+}
+
+.sub-group {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-between;
+}
+
+.controls {
+  display: flex;
+  flex-direction: row;
+}
+
+label {
+  padding: 0.5rem;
+  cursor: pointer;
+}
+
+.slider-control {
+  display: block;
+  width: 1.2rem;
+  height: 1.2rem;
+  border: 1px solid rgb(37, 33, 33);
+  border-radius: 50%;
+  transition: 0.3s ease;
+}
+
+label:hover .slider-control {
+  background-color: rgb(183, 43, 226);
+  box-shadow: 0rem 0rem 1rem rgb(183, 43, 226);
+}
+
+label:active .slider-control {
+  background-color: transparent;
+}
+
+#slider-button1:checked ~ .sub-group .controls label .control1,
+#slider-button2:checked ~ .sub-group .controls label .control2,
+#slider-button3:checked ~ .sub-group .controls label .control3,
+#slider-button4:checked ~ .sub-group .controls label .control4,
+#slider-button5:checked ~ .sub-group .controls label .control5 {
+  background-color: cadetblue;
+}
+
+.fig-captures {
+  display: flex;
+  overflow-x: hidden;
+  width: 50%;
+}
+
+.capture {
+  text-align: left;
+  min-width: 100%;
+  line-height: 1.7rem;
+}
+
+@media (max-width: 767px) {
+  .sub-group {
+    flex-direction: column;
+  }
+
+  .controls {
+    align-self: center;
+    margin-bottom: 1rem;
+  }
+
+  .fig-captures {
+    width: 100%;
+  }
+}
+
+@media (max-width: 600px) {
+  .main {
+    width: 90vw;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+  }
+
+  .title {
+    font-size: 1rem;
+  }
+
+  .capture {
+    font-size: 0.8rem;
+    line-height: 1em;
+  }
+}
+
+/* Move slides */
+#slider-button1:checked ~ .slider-frame .slider-body .slide1 {
+  margin-left: 0;
+}
+
+#slider-button2:checked ~ .slider-frame .slider-body .slide1 {
+  margin-left: -100%;
+}
+
+#slider-button3:checked ~ .slider-frame .slider-body .slide1 {
+  margin-left: -200%;
+}
+
+#slider-button4:checked ~ .slider-frame .slider-body .slide1 {
+  margin-left: -300%;
+}
+#slider-button5:checked ~ .slider-frame .slider-body .slide1 {
+  margin-left: -400%;
+}
+
+/* Move text */
+#slider-button1:checked ~ .sub-group .fig-captures .text1 {
+  margin-left: 0;
+}
+
+#slider-button2:checked ~ .sub-group .fig-captures .text1 {
+  margin-left: -100%;
+}
+
+#slider-button3:checked ~ .sub-group .fig-captures .text1 {
+  margin-left: -200%;
+}
+
+#slider-button4:checked ~ .sub-group .fig-captures .text1 {
+  margin-left: -300%;
+}
+#slider-button5:checked ~ .sub-group .fig-captures .text1 {
+  margin-left: -400%;
+}
